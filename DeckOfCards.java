@@ -4,7 +4,7 @@ package com.bridgelabz;
 import java.util.Scanner;
 
 public class DeckOfCards {
-    public static void main(String[] args) {
+    public static void main(String[] args) {2
         System.out.println("Welcome to Workshop_DeckOfCards!!");
         String player[] = {"Player 1", "Player 2", "Player 3", "Player 4"};
         String[] suit = {"Clubs", "Diamond", "Spades", "Hearts"};
@@ -20,7 +20,20 @@ public class DeckOfCards {
             System.out.println(" ");
         }
         System.out.println("Total number of cards are:" + card);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of players \n");
+        int maxPlayers = sc.nextInt();
+        sc.close();
+        System.out.println("Maximum numbers of players are    : " + maxPlayers + "\n");
 
+        System.out.println("Players Sequence : ");
+        playerSequence(maxPlayers);
+    }
+
+    public static void playerSequence(int maxPlayers) {
+        for (int i = 1; i <= maxPlayers; i++) {
+            System.out.println("Player" + i);
+        }
     }
 
     public void addPlayers() {
@@ -35,4 +48,3 @@ public class DeckOfCards {
         }
     }
 }
-
