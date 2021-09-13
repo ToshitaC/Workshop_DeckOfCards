@@ -1,5 +1,8 @@
 package com.bridgelabz;
 
+
+import java.util.Scanner;
+
 public class DeckOfCards {
     public static void main(String[] args) {
         System.out.println("Welcome to Workshop_DeckOfCards!!");
@@ -19,9 +22,17 @@ public class DeckOfCards {
         System.out.println("Total number of cards are:" + card);
 
     }
+
+    public void addPlayers() {
+        System.out.println("Add Player between 2 and 4");
+        Scanner sc = new Scanner(System.in);
+        int playerCount = sc.nextInt();
+        if (playerCount >= 2 && playerCount <= 4) {
+            System.out.println("No.of Players are : " + playerCount);
+        } else {
+            System.out.println("Invalid input");
+            addPlayers();
+        }
+    }
 }
-
-
-
-
 
